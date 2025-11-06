@@ -26,4 +26,12 @@ public class PropertyController {
     public Property createProperty(@RequestBody Property property) {
         return propertyServiceImpl.createProperty(property);
     }
+    @GetMapping("/{id}")
+    public Property getPropertyById(@PathVariable Long id) {
+        return propertyServiceImpl.getPropertyById(id);
+    }
+    @DeleteMapping("/{id}")
+    public Property deleteProperty(@PathVariable Long id) {
+        return propertyServiceImpl.deleteProperty(id);
+    }
 }
